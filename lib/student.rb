@@ -15,7 +15,7 @@ class Student
     # remember each row should be a new instance of the Student class
     sql = <<-SQL
       SELECT *
-      FROM Students
+      FROM students
     SQL
  
     DB[:conn].execute(sql).map do |row|
@@ -28,7 +28,7 @@ class Student
     # return a new instance of the Student class
     sql = <<-SQL
       SELECT *
-      FROM Students 
+      FROM students 
       WHERE name = ? 
       LIMIT 1 
     SQL
@@ -67,7 +67,7 @@ class Student
   def self.all_students_in_grade_9
     sql = <<-SQL
       SELECT *
-      FROM Students 
+      FROM students  
       WHERE grade = 9  
     SQL
     
