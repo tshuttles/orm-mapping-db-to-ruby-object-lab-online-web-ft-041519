@@ -28,6 +28,10 @@ class Student
       SELECT *
       FROM Students 
       WHERE name = ? 
+      LIMIT 1 
+    SQL 
+    
+    
   end
   
   def save
